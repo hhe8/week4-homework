@@ -7,10 +7,11 @@ Rails.application.routes.draw do
   post '/places' => 'places#create'
 
   get '/places/:id' => 'places#show'
-
   delete '/places/:id' => 'places#destroy'
+
   get '/places/:id/edit' => 'places#edit'
-  get '/places/:id/submit_edit' => 'places#update'
-  get '/reviews/:place_id/submit_new'  => 'reviews#create'
+  patch '/places/:id' => 'places#update'
+
+  post '/reviews/:place_id'  => 'reviews#create'
 
 end
